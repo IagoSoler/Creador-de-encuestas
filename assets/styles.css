@@ -1,0 +1,241 @@
+/*Selectores generales*/
+/* Establece la fuente y el diseño básico del cuerpo de la página */
+body {
+    font-family: Arial, sans-serif; /* Fuente predeterminada */
+    margin: 0; /* Sin margen exterior */
+    padding: 0; /* Sin padding exterior */
+    display: flex; /* Uso de Flexbox para el diseño, que permite compaginar elementos  en columna */
+    flex-direction: column; /* Elementos en columna */
+    min-height: 100vh; /* Altura mínima igual a la altura de la ventana */
+}
+
+/* Estilos para el encabezado */
+header {
+    background-color: #ccc; /* Color de fondo gris claro */
+    padding: 3em; /* Espaciado interno */
+    display: flex; /* Uso de Flexbox */
+    justify-content: flex-start; /* Alineación al inicio */
+    align-items: center; /* Centrado verticalmente */
+    position: relative; /* Posicionamiento relativo */
+}
+
+/* Estilos para el contenido principal */
+main {
+    padding: 2em; /* Espaciado interno */
+    text-align: center; /* Texto centrado */
+}
+
+/* Estilos para el pie de página */
+footer {
+    margin-top: auto; /* Empujar hacia abajo */
+    background-color: #ccc; /* Color de fondo gris claro */
+    padding: 1em; /* Espaciado interno */
+    text-align: center; /* Texto centrado */
+}
+
+/* Estilos para los encabezados h1 y h2 */
+h1 {
+    font-size: 2em; /* Tamaño de fuente grande */
+    margin-top: 0; /* Sin margen superior */
+}
+
+h2 {
+    font-size: 1.5em; /* Tamaño de fuente mediano */
+}
+
+/* Estilos para los párrafos */
+p {
+    margin-bottom: 1em; /* Espacio debajo */
+}
+
+/* Estilos para los enlaces */
+a {
+    color: #000; /* Color de texto negro */
+    font-weight: bold; /* Texto en negrita */
+    transition: color 0.3s ease; /* Transición suave del color */
+/* Estilos para listas */
+}
+ul {
+    list-style-type: none; /* Sin marcadores de lista */
+    padding: 0; /* Sin padding */
+    margin: 0; /* Sin margen */
+}
+
+/* Estilos para formularios */
+form {
+    margin: 0 auto; /* Centrado horizontalmente */
+    max-width: 400px; /* Ancho máximo */
+}
+
+
+/* Selectores de clases */
+/* Estilos para el menú principal */
+section.MainMenu {
+    margin: 0 auto; /* Centrado horizontalmente */
+    max-width: 400px; /* Ancho máximo */
+}
+
+.header-title {
+    position: absolute; /* Posicionamiento absoluto */
+    left: 50%; /* Centrado horizontalmente */
+    transform: translateX(-50%); /* Ajuste para centrado */
+    text-align: center; /* Texto centrado */
+}
+
+/* Estilos para la navegación del encabezado */
+.header-nav {
+    margin-left: auto; /* Empujar hacia la derecha */
+}
+
+/* Estilos para gráficos de barras */
+.chart {
+    position: relative; /* Posicionamiento relativo */
+    width: 30%; /* Ancho */
+    margin: 0 auto; /* Centrado horizontalmente */
+    border: 1px solid #ddd; /* Borde sutil */
+    padding: 10px; /* Espaciado interno */
+}
+
+
+/* Estilos para las barras de los gráficos */
+.bar {
+    position: relative; /* Posicionamiento relativo */
+    height: 20px; /* Altura */
+    background: linear-gradient(to right, #00ff7f, #007bff); /* Gradiente de colores */
+    margin-bottom: 5px; /* Espacio debajo */
+    transition: width 0.5s ease-in-out; /* Transición suave del ancho */
+}
+
+/* Estilos para el texto dentro de las barras */
+.bar-text {
+    position: absolute; /* Posicionamiento absoluto */
+    left: 0; /* Alineado a la izquierda */
+    top: 50%; /* Centrado verticalmente */
+    transform: translateY(-50%); /* Ajuste para centrado */
+    color: #000000; /* Color de texto negro */
+    font-weight: bold; /* Texto en negrita */
+}
+
+/* Estilos para el contenedor de tablas de encuestas */
+.surveys-table-container {
+    display: flex; /* Uso de Flexbox */
+    justify-content: center; /* Centrado horizontalmente */
+    align-items: center; /* Centrado verticalmente */
+}
+
+/* Estilos para las tablas de encuestas */
+.surveys-table {
+    table-layout: fixed; /* Diseño de tabla fijo */
+    width: 70%; /* Ancho */
+    border-collapse: collapse; /* Sin espacios entre celdas */
+    border: 3px solid black; /* Borde sólido */
+}
+
+/* Estilos para las cajas de preguntas */
+.question-box {
+    background-color: #f9f9f9; /* Color de fondo claro */
+    border: 1px solid #ddd; /* Borde sutil */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 15px; /* Espaciado interno */
+    margin-bottom: 20px; /* Espacio debajo */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Estilos para las declaraciones de preguntas */
+.question-statement {
+    font-weight: bold; /* Texto en negrita */
+}
+
+/* Estilos para los tipos de respuesta */
+.tipoRespuesta {
+    display: inline-block; /* Diseño en línea */
+    margin-bottom: 0.5em; /* Espacio debajo */
+}
+
+/* Pseudo-classes */
+a:hover {
+    color: #666;/* Color de letra azul oscuro */
+}
+
+.bar:hover {
+    background: linear-gradient(to right, #0056b3, #00ff7f);/* Color de la barra al pasar el cursor*/
+}
+
+/* Estilos para botones y campos de envío al pasar el cursor */
+input[type="submit"]:hover,
+button.OtherButtons:hover,
+button[type="submit"]:hover {
+    background-color: #0056b3; /* Color de fondo azul oscuro */
+}
+
+/* Selectores específicos */
+
+
+/* Estilos para elementos de lista */
+ul li {
+    background-color: #007bff; /* Color de fondo azul */
+    color: #fff; /* Color de texto blanco */
+    margin: 10px auto; /* Margen alrededor */
+    padding: 10px; /* Espaciado interno */
+    border: 1px solid #ccc; /* Borde sutil */
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    max-width: 300px; /* Ancho máximo */
+}
+
+/* Estilos para encabezados de tabla */
+.surveys-table thead th {
+    background: linear-gradient(to bottom, rgb(0 0 0 / 10%), rgb(0 0 0 / 50%)); /* Fondo con gradiente */
+    border: 3px solid black; /* Borde sólido */
+    padding: 10px; /* Espaciado interno */
+    text-align: center; /* Texto centrado */
+}
+
+/* Estilos para celdas de tabla */
+.surveys-table tbody td {
+    border: 3px solid black; /* Borde sólido */
+    padding: 10px; /* Espaciado interno */
+    text-align: center; /* Texto centrado */
+}
+
+/* Estilos para filas pares de tabla */
+.surveys-table tbody tr:nth-child(even) {
+    background-color: #D6EEEE; /* Color de fondo claro */
+}
+
+/* Estilos para encabezados y pies de tabla */
+.surveys-table thead,
+.surveys-table tfoot {
+    background: linear-gradient(to bottom, rgb(0 0 0 / 10%), rgb(0 0 0 / 50%)); /* Fondo con gradiente */
+    color: white; /* Color de texto blanco */
+    text-shadow: 1px 1px 1px black; /* Sombra de texto */
+}
+
+
+/* Estilos para campos de entrada y botones */
+input,
+button.OtherButtons,
+button[type="submit"] {
+    width: 100%; /* Ancho completo */
+    padding: 0.5em; /* Espaciado interno */
+    margin-bottom: 1em; /* Espacio debajo */
+    box-sizing: border-box; /* Incluye padding y border en el ancho total */
+}
+
+/* Estilos específicos para botones y campos de envío */
+input[type="submit"],
+button.OtherButtons,
+button[type="submit"] {
+    background-color: #007bff; /* Color de fondo azul */
+    color: #fff; /* Color de texto blanco */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cursor de puntero */
+    transition: background-color 0.3s ease; /* Transición suave del color de fondo */
+}
+
+/* Estilos para radio buttons y checkboxes */
+input[type="radio"],
+input[type="checkbox"] {
+    width: auto; /* Ancho automático */
+    display: "inline"; /* Diseño en línea */
+}

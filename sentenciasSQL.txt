@@ -1,0 +1,64 @@
+CREATE TABLE users (
+ id INT PRIMARY KEY AUTO_INCREMENT,
+ username VARCHAR(255) NOT NULL,
+ user_email VARCHAR(255),
+ user_password VARCHAR(255) NOT NULL,
+ role ENUM('admin', 'user') DEFAULT 'user',
+ user_creation_date DATE DEFAULT CURRENT_DATE
+);
+
+CREATE TABLE survey (
+ id VARCHAR(255) PRIMARY KEY,
+ title VARCHAR(255) NOT NULL,
+ current_state ENUM('abierta', 'cerrada') NOT NULL,
+ creation_date DATE DEFAULT CURRENT_DATE,
+ end_date DATE,
+ created_by INT,
+ FOREIGN KEY (created_by) REFERENCES users(id)
+);
+
+CREATE TABLE questions (
+ id INT PRIMARY KEY AUTO_INCREMENT,
+ survey_id VARCHAR(255) NOT NULL,
+ statement TEXT NOT NULL,
+ question_type ENUM('res_unica', 'res_multiple'),
+ FOREIGN KEY (survey_id) REFERENCES survey(id)
+);
+CREATE TABLE options(
+ id INT PRIMARY KEY AUTO_INCREMENT,
+ question_id INT NOT NULL,
+ statement TEXT,
+ FOREIGN KEY (question_id) REFERENCES questions(id)
+);
+
+CREATE TABLE answers (
+ question_id INT NOT NULL,
+ user_id INT,
+ option_id INT,
+ FOREIGN KEY (question_id) REFERENCES questions(id),
+ FOREIGN KEY (user_id) REFERENCES users(id),
+ FOREIGN KEY (option_id) REFERENCES options(id)
+);
+CREATE TABLE users_in_survey (
+ survey_id VARCHAR(255) NOT NULL,
+ user_id INT NOT NULL,
+ FOREIGN KEY (survey_id) REFERENCES survey(id),
+ FOREIGN KEY (user_id) REFERENCES users(id)
+);
+
+INSERT INTO users (username, user_email, user_password, role) VALUES ('Iago', 'correo_electronico@example.com', '$2y$10$EWKQeHhfDeDrK.D2AWw8BeIH5OPBVmqMITZtjt5uwnusk3ecOKZ9C', 'admin');
+
+delete from users_in_survey;
+delete from answers;
+delete from options;
+delete from questions;
+delete from survey;
+delete from users;
+
+drop TABLE users_in_survey;
+drop TABLE answers;
+drop TABLE options;
+drop TABLE questions;
+drop TABLE survey;
+drop TABLE users;
+
