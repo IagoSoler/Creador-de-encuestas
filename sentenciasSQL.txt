@@ -1,3 +1,6 @@
+-----------------------------------Sentencias para crear la BBDD SQL:-----------------------------------
+
+
 CREATE TABLE users (
  id INT PRIMARY KEY AUTO_INCREMENT,
  username VARCHAR(255) NOT NULL,
@@ -46,19 +49,9 @@ CREATE TABLE users_in_survey (
  FOREIGN KEY (user_id) REFERENCES users(id)
 );
 
-INSERT INTO users (username, user_email, user_password, role) VALUES ('Iago', 'correo_electronico@example.com', '$2y$10$EWKQeHhfDeDrK.D2AWw8BeIH5OPBVmqMITZtjt5uwnusk3ecOKZ9C', 'admin');
 
-delete from users_in_survey;
-delete from answers;
-delete from options;
-delete from questions;
-delete from survey;
-delete from users;
+-----------------------------------Crear usuario Administrador Usuario:"admin" con contraseña "admin" :-----------------------------------
+INSERT INTO users (username, user_email, user_password, role) VALUES ('admin', 'admin@admin.com', '$2y$10$rcPQRvnylfFdanBj0Tufhu2SUaVgYd31.rVIC.htbD1y0i7vsC5jC', 'admin');
 
-drop TABLE users_in_survey;
-drop TABLE answers;
-drop TABLE options;
-drop TABLE questions;
-drop TABLE survey;
-drop TABLE users;
+
 
