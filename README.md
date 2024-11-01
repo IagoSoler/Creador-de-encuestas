@@ -18,7 +18,7 @@ Este proyecto es una aplicación web para crear y gestionar encuestas online . L
 ## Instalación
 1. Clona el repositorio:
    ```bash
-   git clone https://github.com/tu_usuario/EncuestasOnline.git
+   git clone https://github.com/IagoSoler/Creador-de-encuestas.git
    ```
 2. Configura tu servidor local (XAMPP, WAMP, etc.) y coloca el proyecto en la carpeta `htdocs`.
 3. Crea una base de datos en MySQL y ajusta la configuración de conexión en el proyecto.
