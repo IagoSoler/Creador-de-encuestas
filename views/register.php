@@ -1,6 +1,6 @@
 <?php
 /*Esta es la página de registro, donde se podrá registrar un nuevo usuario*/
-require_once '../Controllers/UserController.php';//Se enlaza el presente archivo (Vista), a su respectivo Controlador, siguiendo arquitectura MVC.
+require_once '../controllers/UserController.php';//Se enlaza el presente archivo (Vista), a su respectivo Controlador, siguiendo arquitectura MVC.
 $userController = new UserController();//Se crea una instancia de la  clase de UserController.
 $userController->logoutUser();//Se destruye la sesión actual, en caso de que el usuario ya estuviese logeado, para evitar errores.
 session_start();//Se crea una sesión, que servirá para guradar la sesión del suuario en caso de que se registrase.

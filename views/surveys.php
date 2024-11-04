@@ -4,7 +4,7 @@
     -Si no goza de privilegios, podrá ver las encuestas que ha creado o en las que ha participado.*/
 session_start();//Se crea una sesión (que tendrá por nombre de usuario el de la sesión inciada en "login.php").
 require_once '../controllers/SurveyController.php'; //Se enlaza el presente archivo (Vista), a su respectivo Controlador, siguiendo arquitectura MVC.
-require_once '../Controllers/UserController.php';//Se enlaza el presente archivo (Vista), a su respectivo Controlador, siguiendo arquitectura MVC.
+require_once '../controllers/UserController.php';//Se enlaza el presente archivo (Vista), a su respectivo Controlador, siguiendo arquitectura MVC.
 
 if (!isset ($_SESSION['username'])) {//Si no hay sesión iniciada, cualquier intento de acceder a esta página devovlerá al login.
     header("Location: login.php");

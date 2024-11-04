@@ -1,6 +1,6 @@
 <?php
 /**En esta página se efectua la lógica de "logout", es decir, de cierre de sesión, tras lo cual ofrecerá un enlace al inicio */
-require_once '../Controllers/UserController.php';//Se enlaza el presente archivo (Vista), a su respectivo Controlador, siguiendo arquitectura MVC.
+require_once '../controllers/UserController.php';//Se enlaza el presente archivo (Vista), a su respectivo Controlador, siguiendo arquitectura MVC.
 $userController = new UserController();//Se crea una instancia de la  clase de UserController.
 $userController->logoutUser();//Se destruye la sesión actual.
 ?>

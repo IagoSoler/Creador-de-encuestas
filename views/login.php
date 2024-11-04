@@ -3,7 +3,7 @@
   y cualquier otra página si se intentase acceder sin un usuario acreditado.
   Naturalmente, en esta página se efectuará el login. También ofrece un enlace al registro */
 session_start();//Se crea una sesión (que tendrá por nombre de usuario el de la sesión inciada en "login.php").
-require_once '../Controllers/UserController.php';//Se enlaza el presente archivo (Vista), a su respectivo Controlador, siguiendo arquitectura MVC.
+require_once '../controllers/UserController.php';//Se enlaza el presente archivo (Vista), a su respectivo Controlador, siguiendo arquitectura MVC.
 $userController = new UserController();//Se crea una instancia de la  clase de UserController.
 if (isset($_POST['login'])) {//Al pulsar el botón de "Iniciar Sesión", se envía el formulario por método POST y se ejecuta el sigueinte código.
     $username = $_POST['username'];//Se recogen en el formulario el nombre y contraseña escritas por el usuario.
