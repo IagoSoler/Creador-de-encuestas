@@ -3,7 +3,7 @@
 La encuesta se identificará con el ID que se transporta en la URL, mediante el método GET*/ 
 session_start();//Se crea una sesión (que tendrá por nombre de usuario el de la sesión inciada en "login.php").
 require_once '../controllers/questionController.php';//Se enlaza el presente archivo (Vista), a su respectivo Controlador, siguiendo arquitectura MVC.
-require_once '../controllers/surveyController.php';
+require_once '../controllers/SurveyController.php';
 
 if (!isset ($_SESSION['username'])) {//Si no hay sesión iniciada, cualquier intetno de acceder a esta página devovlerá al login.
     header("Location: login.php");
@@ -87,7 +87,11 @@ if (isset($_POST['finishSurvey'])) {//En caso de pulsar el botón "Finalizar", s
             <div id="inputFields"></div>
             <input type="submit" name="addQuestion" value="Añadir Pregunta" id="addQuestionButton" ><!--Botón para enviar el primer formulario-->
             
+            
         </form>
+            <?php if (isset($message)): ?><!--Aquí se devolverá el mensaje que se guardaba en el apartado PHP de la página, indicando éxito o error al crear la pregunta, tras enviar el formulario-->
+                <p id="succesMessage"><?php echo $message; ?></p>
+            <?php endif; ?>
         <br>
         <br>
         <br>
@@ -96,9 +100,7 @@ if (isset($_POST['finishSurvey'])) {//En caso de pulsar el botón "Finalizar", s
             <p>Cuando hayas creado todas las preguntas:</p>
             <input type="submit" name="finishSurvey" value="Finalizar" id="addQuestionButton">
         </form>
-        <?php if (isset($message)): ?><!--Aquí se devolverá el mensaje que se guardaba en el apartado PHP de la página, indicando éxito o error al crear la pregunta, tras enviar el formulario-->
-                <p ><?php echo $message; ?></p>
-            <?php endif; ?>
+ 
     </main>
 
 

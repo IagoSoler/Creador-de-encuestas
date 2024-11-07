@@ -3,8 +3,9 @@ número de de opciones en el desplegable, muestre esa cantidad de cajas de texto
 $(document).ready(function () {  // Se ejecuta cuando el documento está listo.
         // Funcionalidad para mostrar/ocultar el formulario
         $('#showFormButton').click(function() {
-            $('#showFormButton').hide(); // Alterna entre mostrar y ocultar
-            $('#NewQuestionForm').show(); // Alterna entre mostrar y ocultar
+            $('#showFormButton').hide(); 
+            $('#NewQuestionForm').show(); 
+            $('#succesMessage').hide();
         });
     
     $('#numFields').change(function () {
