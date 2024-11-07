@@ -22,7 +22,8 @@ if ($survey['current_state'] =="cerrada") {//Si la encuesta tiene como estado "c
     die ('Esta encuesta esta cerrada desde ' . $survey['end_date']); //devolverá una advertencia y no dejará responder
 }
 if ($surveyController->checkIfAnswered($survey_id, $username)) {//en caso de que ya haya sido respondida (el usuario figura en "user_in_surey" con esa misma encusta)
-    die ('Ya ha respondido a esta encuesta'); //Devolverá esta otra advertencia y no permitirá responderla de nuevo.
+    echo '<script>alert("Ya ha respondido a esta encuesta"); window.location.href="home.php";</script>';
+    exit();//Devolverá esta otra advertencia y no permitirá responderla de nuevo.
 }
 
 
@@ -31,7 +32,7 @@ if (isset ($_POST["Submit"])) {//Al pulsar el botón submit (único botón de es
 
 
     if ($surveyController->answerSurvey($survey_id, $username, $answers)) { //que serán pasados como parámetros de esta función.
-        header("Location: surveys.php");//En caso de éxito se devolverá a la lista de encuestas.
+        header("Location: home.php");//En caso de éxito se devolverá a la lista de encuestas.
         exit();
     } else {
         echo "Error";//En caso contrario indicará error, 

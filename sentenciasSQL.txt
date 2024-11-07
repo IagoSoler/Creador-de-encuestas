@@ -55,3 +55,22 @@ INSERT INTO users (username, user_email, user_password, role) VALUES ('admin', '
 
 
 
+
+-----------------------------------Vaciar las tablas:-------------
+delete from users_in_survey;
+delete from answers;
+delete from options;
+delete from questions;
+delete from survey;
+delete from users;
+-----------------------------------Eliminar las tablas:-------------
+
+
+drop TABLE users_in_survey;
+drop TABLE answers;
+drop TABLE options;
+drop TABLE questions;
+drop TABLE survey;
+drop TABLE users;
+
+

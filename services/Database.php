@@ -13,11 +13,17 @@ class Database
 
     private function setConnection()//Setter de la conexión.
     {
+        
         //Se definen los parámetros de la conexión para el servidor local, en el presente caso.
         $servername = "localhost";
+        $serverusername = "root";
+        $serverpassword = "";
+        $dbname = "bbddproyectodaw_iagosoler";
+        //Para el despliegue en servidor:
+       /*  $servername = "localhost";
         $serverusername = "u657311494_iago_soler";
-        $serverpassword = "Frapfrap1!";
-        $dbname = "u657311494_bbdd_encuestas";
+        $serverpassword = "***";
+        $dbname = "u657311494_bbdd_encuestas"; */
 
 
         $conn = new mysqli($servername, $serverusername, $serverpassword, $dbname);

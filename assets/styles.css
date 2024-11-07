@@ -239,3 +239,11 @@ input[type="checkbox"] {
     width: auto; /* Ancho automático */
     display: "inline"; /* Diseño en línea */
 }
+#infoSpan{
+    padding: 3px 5px;
+    background-color: rgb(238, 232, 232);
+    color:black;
+    border-radius: 5px;
+    border: 1px solid black;
+    cursor: help ;
+}

@@ -12,7 +12,7 @@
         <?php
         //Si la sesión está inciada, aparecerá el nombre del usuario y un botón para cerrar sesión, que llevará a "logout.php".
         if (isset ($_SESSION['username'])) {
-            echo 'Conectado como:'. $_SESSION['username']."  ";
+            echo 'Conectado como: '. $_SESSION['username']."  ";
             echo '<button onclick="window.location.href=\'logout.php\';">Cerrar Sesión</button>';
         }
         ?>

@@ -1,7 +1,14 @@
 /*Este script se usará para que, al crear preguntas y seleccionar un 
 número de de opciones en el desplegable, muestre esa cantidad de cajas de texto*/
 $(document).ready(function () {  // Se ejecuta cuando el documento está listo.
+        // Funcionalidad para mostrar/ocultar el formulario
+        $('#showFormButton').click(function() {
+            $('#showFormButton').hide(); // Alterna entre mostrar y ocultar
+            $('#NewQuestionForm').show(); // Alterna entre mostrar y ocultar
+        });
+    
     $('#numFields').change(function () {
+
         /* Se activa cuando el valor del desplegable (que es un selector)  con id 'numFields' cambia(de ahi el método "change").
         Se almacena en la variable "num" el número de campos seleccionados en el desplegable*/
         var num = $(this).val(); 
